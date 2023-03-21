@@ -2,8 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 
 const number = 555;
-const singer = {name:'Araf', job:'=Singer'};
-const singer2 = {name:'RK', job:'Singer'};
+const singers = [{name:'Araf', job:'=Singer'},
+                {name:'RK', job:'Singer'},
+                {name:'AS', job:'Singer'},
+                {name:'MM', job:'Singer'}
+              ];
 
 const singerStyle = {
   color:'purple',
@@ -11,11 +14,15 @@ const singerStyle = {
 };
 
 function App() {
+  // const languageNames = ['JS', 'Python', 'C', 'Java', 'Ruby'];
   return (
     <div className="App">
-      <Person name="JS"></Person>
-      <Person name="React"></Person>
-      <Person></Person>
+      {/* {
+        languageNames.map(languageName => <Person name={languageName}></Person>)
+      } */}
+      {
+        singers.map(singer => <Person name={singer.name}></Person>)
+      }
       <h3>This is a friend container</h3>
       <Friend></Friend>
       <Friend></Friend>
