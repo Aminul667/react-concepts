@@ -13,10 +13,8 @@ const singerStyle = {
 function App() {
   return (
     <div className="App">
-      <Person></Person>
-      <Person></Person>
-      <Person></Person>
-      <Person></Person>
+      <Person name="JS"></Person>
+      <Person name="React"></Person>
       <Person></Person>
       <h3>This is a friend container</h3>
       <Friend></Friend>
@@ -26,10 +24,11 @@ function App() {
   );
 }
 
-function Person(){
+function Person(props){
+  console.log(props)
   return (
     <div className="person">
-      <h1>Hello REACT</h1>
+      <h1>Hello {props.name}</h1>
       <p>Profession: Java Scripts</p>
     </div>
   )
